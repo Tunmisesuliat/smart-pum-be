@@ -81,14 +81,14 @@
       "age": 23,
       "eyeColor": "green",
       "name": {
-        "first": "Ruby",
-        "last": "Glenn"
+        "first": "Tamia",
+        "last": "Dickinson"
       },
-      "company": "WATERBABY",
+      "company": "Kohler LLC",
       "email": "ruby.glenn@waterbaby.co.uk",
       "hashed_password": "$2b$10$CHfBehlKIT81MHjreGxUUejPoZLAq0w2NkuqGrHwLZfbHJ3fk7Q/m",
-      "phone": "+1 (800) 433-3997",
-      "address": "622 Fanchon Place, Kohatk, Marshall Islands, 8665"
+      "phone": "+1 (700) 433-0000",
+      "address": "4213 Bernier Underpass"
     }
   ]
 }

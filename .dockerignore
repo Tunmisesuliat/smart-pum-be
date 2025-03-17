@@ -1,0 +1,10 @@
+node_modules
+dist
+test
+.dockerignore
+Dockerfile
+README.md
+.env
+.husky
+.gitignore
+.prettierrc

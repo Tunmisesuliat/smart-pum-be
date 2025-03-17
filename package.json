@@ -4,12 +4,13 @@
   "description": "Apis for the smart pump fe",
   "main": "index.js",
   "scripts": {
-  "start": "node index.js",
-  "start:prod": "NODE_ENV=production node index.js",
-  "start:dev": "NODE_ENV=development npx nodemon index.js",
-  "start:stage": "NODE_ENV=staging node index.js",
-  "start:test": "NODE_ENV=test node index.js"
-},
+    "start": "node index.js",
+    "start:prod": "NODE_ENV=production node index.js",
+    "start:dev": "NODE_ENV=development npx nodemon index.js",
+    "start:stage": "NODE_ENV=staging node index.js",
+    "start:test": "NODE_ENV=test node index.js",
+    "test": "NODE_ENV=development mocha --require chai-http test/**/*.test.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -32,5 +33,11 @@
     "morgan": "^1.10.0",
     "winston": "^3.17.0"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@faker-js/faker": "^9.6.0",
+    "chai": "^4.5.0",
+    "chai-http": "^4.4.0",
+    "mocha": "^11.1.0"
+  }
 }

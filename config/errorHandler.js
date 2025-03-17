@@ -16,9 +16,8 @@ export default function errorHandler(error, req, res, next) {
   }
 
   let code = error.statusCode || 500;
-  let message = 'Ops! Something went wrong :(';
-
-  if (error.message === 'jwt malformed') {
+  let message;
+  if (error.message == 'jwt malformed') {
     message = 'Invalid or expired token';
     code = 401;
   }
@@ -26,6 +25,8 @@ export default function errorHandler(error, req, res, next) {
   if (error.message === 'jwt expired' || error.message === 'invalid signature') {
     message = 'Session expired. Kindly login to continue.';
     code = 401;
+  } else {
+    message = error.message
   }
 
   logger.error(error.message);
