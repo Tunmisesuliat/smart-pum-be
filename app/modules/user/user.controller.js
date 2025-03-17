@@ -31,9 +31,9 @@ class UserController {
             return Response.error(res, `Invalid email or password`, 400);
         }
 
-        if(!user.isActive) {
+        if (!user.isActive) {
             logger.warn('User is not active');
-            return res.status(403).json({ message: 'This is not a valid user' });
+            return Response.error(res, 'User is not active', 400);
         }
 
         const passwordMatch = Helpers.comparePassword(password, user.hashed_password);
@@ -72,7 +72,7 @@ class UserController {
         }
 
         const data = _.pick(user, Constants.userDetails);
-        
+
         data.firstName = user.name.first;
         data.lastName = user.name.last;
 
